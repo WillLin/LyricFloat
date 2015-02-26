@@ -1,10 +1,12 @@
 <html>
 	  <head>
 	    <title>LyricFloat</title>
+	    <link rel="stylesheet" type="text/css" href="css/styles.css">
 	  </head>
 	
 	  <body>
 	  <h1>LyricFloat</h1>
+	  <img src="images/lyricfloat.png" alt="LyricFloat" />
 	    
 	   <!-- <p>this is where cloud will go</p>*/ -->
 	   
