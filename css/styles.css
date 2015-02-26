@@ -2,4 +2,22 @@ body {
 	background-color: gray;
 	font-family: Verdana, Geneva, Arial, sans-serif; /*'Droid Sans', */
 	font-size: 14px;
+	color: white;
+	text-align: center;
+	padding-top: 50px;
+}
+
+#logo {
+	margin: auto;
+	margin-bottom: 20px;
+	/*width: 75%; */
+}
+
+#content {
+	/*width: 75%; */
+}
+
+#inputarea {
+	margin: auto;
+	margin-top: 15px;
 }
