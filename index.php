@@ -5,8 +5,10 @@
 	  </head>
 	
 	  <body>
-	  <h1>LyricFloat</h1>
-	  <img src="images/lyricfloat.png" alt="LyricFloat" />
+	  <!-- <h1>LyricFloat</h1> -->
+	  <div id="logo">
+	  	<img src="images/lyricfloat.png" alt="LyricFloat" />
+	  </div>
 	    
 	   <!-- <p>this is where cloud will go</p>*/ -->
 	   
