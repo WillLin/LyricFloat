@@ -2,7 +2,6 @@
 	<head>
 		<title>LyricFloat</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<div id="fb-root"></div>
 		<script>
 			(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
@@ -15,6 +14,8 @@
 	</head>
 
 	<body>
+		<div id="fb-root"></div>
+		
 	<!-- <h1>LyricFloat</h1> -->
 	<div id="logo">
 		<a href="./"><img src="images/lyricfloat_sm.png" alt="LyricFloat" /></a>
@@ -151,7 +152,7 @@
 				<!-- <input class="purplebutton marginleft10" type="button" value="Share"> 
 data-href="https://submit.php"
 				-->
-				<div class="fb-share-button"  data-layout="button"></div>
+				<div class="fb-share-button sharebutton" data-layout="button"></div>
 				<input class="purplebutton marginleft10" type="submit" value="Submit">
 			</div>
 		</form>
