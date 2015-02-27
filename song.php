@@ -30,6 +30,7 @@
 						$wordlist[$word]=1;
 					}
 				}
+				arsort($wordlist);
 			}
 			/*foreach ($wordlist as $word) {
 				$word->parseLyrics($lyrics);
