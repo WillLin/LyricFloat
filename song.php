@@ -28,11 +28,11 @@
 					if(!in_array($w, $wordlist)){
 						array_push($wordlist, $w);
 					}*/
-					if(array_key_exists($word, $wordlist){
-						$wordlist[$word]++;
+					if(array_key_exists($word, $this->wordlist){
+						$this->wordlist[$word]++;
 					}
 					else{
-						$wordlist[$word]=1;
+						$this->wordlist[$word]=1;
 					}
 				}
 				//arsort($wordlist);
@@ -51,6 +51,9 @@
 		}
 		function getWordList(){
 			return $this->wordlist;
+		}
+		function hasWord($word){
+			return array_key_exists($word, $this->wordlist);
 		}
 	}
 ?>
