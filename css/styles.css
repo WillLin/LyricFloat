@@ -24,6 +24,10 @@ body {
 	/*width: 75%; */
 }
 
+#wordcloud {
+	width: 600px;
+}
+
 #inputarea {
 	margin: auto;
 	margin-top: 15px;
@@ -112,7 +116,7 @@ body {
 .center {
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	/*width: 50%;*/
 }
 
 .floatleft {
