@@ -22,10 +22,10 @@
 		<div style="height:25px;">
 			&nbsp;
 		</div>
-		
+
 		<form action="submit.php" method="get">
 			<input type="hidden" name="song" value="testttt" />
-			<input id="backbutton" type="submit" value="Back">
+			<input class="purplebutton" type="submit" value="Back">
 		</form>
 
 		</body>

@@ -133,9 +133,9 @@
 			<input type="text" name="song" placeholder="Input text here" size="35" >
 			<br>
 			<div class="floatright">
-				<input type="button" value="Add to Cloud">
-				<input type="button" value="Share">
-				<input type="submit" value="Submit">
+				<input class="purplebutton marginleft10" type="button" value="Add to Cloud">
+				<input class="purplebutton marginleft10" type="button" value="Share">
+				<input class="purplebutton marginleft10" type="submit" value="Submit">
 			</div>
 		</form>
 	</div>
