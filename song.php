@@ -2,7 +2,6 @@
 	/**
 	* 
 	*/
-	require 'word.php';
 	class Song
 	{
 		private var $name;
@@ -20,15 +19,21 @@
 				$words=explode(" ",$value);
 				foreach($words as $word){
 					$word=trim($word,"!.;:\",\r\0\x0B");
-					$w=new Word($word);
+					/*$w=new Word($word);
 					if(!in_array($w, $wordlist)){
 						array_push($wordlist, $w);
+					}*/
+					if(array_key_exists($word, $wordlist){
+						$wordlist[$word]++;
+					}
+					else{
+						$wordlist[$word]=1;
 					}
 				}
 			}
-			foreach ($wordlist as $word) {
+			/*foreach ($wordlist as $word) {
 				$word->parseLyrics($lyrics);
-			}
+			}*/
 		}
 		function getName()
 		{
