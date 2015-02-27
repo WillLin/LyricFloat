@@ -66,6 +66,7 @@ body {
 	font-weight: bolder;
 }
 
+/* remove this and change all references to class="purplebutton" */
 #backbutton {
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -77,11 +78,30 @@ body {
 	font-weight: bolder;
 }
 
+.purplebutton {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 30px;
+	background-color: purple;
+	border-style: none;
+	font-weight: bolder;
+}
+
+.marginright10 {
+	margin-right: 10px;
+}
+
 
 .center {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
+}
+
+.floatleft {
+	float: left;
 }
 
 .floatright {
