@@ -91,6 +91,16 @@ body {
 	font-weight: bolder;
 }
 
+.sharebutton {
+	transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	vertical-align: middle;
+	margin: 0 10px 0 20px;
+}
+
 .marginleft10 {
 	margin-left: 10px;
 }
