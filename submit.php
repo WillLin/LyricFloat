@@ -2,6 +2,16 @@
 	<head>
 		<title>LyricFloat</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=410610055735538&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 	</head>
 
 	<body>
@@ -134,7 +144,10 @@
 			<br>
 			<div class="floatright">
 				<input class="purplebutton marginleft10" type="button" value="Add to Cloud">
-				<input class="purplebutton marginleft10" type="button" value="Share">
+				<!-- <input class="purplebutton marginleft10" type="button" value="Share"> 
+data-href="https://submit.php"
+				-->
+				<div class="fb-share-button"  data-layout="button"></div>
 				<input class="purplebutton marginleft10" type="submit" value="Submit">
 			</div>
 		</form>
