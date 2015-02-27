@@ -4,13 +4,18 @@
 	*/
 	class Song
 	{
+		//song name
 		private var $name;
+		//artist name
 		private var $artist;
-		private var $wordlist=array();
+		//word list, key is word's context, 
+		//value is its frequency in this song
+		private var $wordlist;
 		function __construct($name,$artist)
 		{
 			$this->name=$name;
 			$this->artist=$artist;
+			$this->wordlist=array();
 		}
 		function parseLyrics($lyrics)
 		{
