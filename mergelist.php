@@ -24,6 +24,7 @@
 					echo "error in merge! key disappeared";
 				}
 			}
+			return $merged;
 		}
 	}
 ?>
