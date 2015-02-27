@@ -6,18 +6,22 @@
 	
 	<body>
 	<!-- <h1>LyricFloat</h1> -->
-	<div id="logo">
+	<div id="largelogo">
 		<a href="./"><img src="images/lyricfloat.png" alt="LyricFloat" /></a>
 	</div>
 
 	<!-- <p>this is where cloud will go</p>*/ -->
 
-	<br><br><br><br><br><br><br><br><br><br>
+	<div style="height:25px;">
+	</div>
+
 	<div id="inputarea">
 		<form action="submit.php" method="get">
 			<input type="text" name="song" placeholder="Input text here" size="35" >
 			<br>
-			<input type="submit" value="Submit">
+			<div class="floatright">
+				<input type="submit" value="Submit">
+			</div>
 		</form>
 	</div>
 

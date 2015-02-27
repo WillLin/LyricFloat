@@ -19,11 +19,13 @@
 		<p>this is where cloud will go</p>*/ 
 		<a href="page2.php" > ?php  echo $_GET["song"];  ?> </a>
 		-->
-
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div style="height:25px;">
+			&nbsp;
+		</div>
+		
 		<form action="submit.php" method="get">
 			<input type="hidden" name="song" value="testttt" />
-			<input type="submit" value="Back">
+			<input id="backbutton" type="submit" value="Back">
 		</form>
 
 		</body>

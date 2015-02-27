@@ -125,15 +125,20 @@
 	<?php  echo $_GET["song"];  ?>
 	-->
 
+	<div style="height:50px;">
+	</div>
 
-	<br><br><br><br><br><br><br><br><br><br>
-	<form action="submit.php" method="get">
-		<input type="text" name="song" placeholder="Input text here" size="35" >
-		<br>
-		<input type="button" value="Add to Cloud">
-		<input type="button" value="Share">
-		<input type="submit" value="Submit">
-	</form>
+	<div id="inputarea">
+		<form action="submit.php" method="get">
+			<input type="text" name="song" placeholder="Input text here" size="35" >
+			<br>
+			<div class="floatright">
+				<input type="button" value="Add to Cloud">
+				<input type="button" value="Share">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
 
 
 	</body>
