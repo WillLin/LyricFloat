@@ -11,7 +11,7 @@
 		</div>
 
 		<h2>Search World</h2>
-		<p>Song Title.............................Frequency</p>
+		<p><a href="songlyrics.php">Song Title</a>.............................Frequency</p>
 		<p>Song Title.............................Frequency</p>
 		<p>Song Title.............................Frequency</p>
 
