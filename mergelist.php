@@ -5,9 +5,8 @@
 	class Mergelist
 	{
 		
-		function __construct(argument)
+		function __construct()
 		{
-			# code...
 		}
 		function merge($array1, $array2)
 		{
