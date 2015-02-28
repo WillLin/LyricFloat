@@ -116,17 +116,15 @@
 				$filtered = filter_stopwords($words, $stopwords);
 				echo word_cloud($filtered, 600);
 			?>
-			<!-- </a> -->
 		 </div>
 
 		<div style="height:50px;">
 			&nbsp;
 		</div>
 
-		<!-- Need to fix dropdown style -->
-		<div id="inputarea" class="ui-widget" >
+		<div id="inputarea">
 			<form action="submit.php" method="get">
-				<input id="artist" type="text" name="artist" placeholder="Input text here" size="35" >
+				<input id="artist" class="ui-widget" type="text" name="artist" placeholder="Enter artist name" size="35" >
 				<br />
 				<div class="floatright">
 					<input class="purplebutton marginleft10" type="button" value="Add to Cloud">
@@ -135,7 +133,6 @@
 				</div>
 			</form>
 		</div>
-
 
 	</body>
 	
