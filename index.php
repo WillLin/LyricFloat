@@ -17,7 +17,7 @@
 
 	<div id="inputarea">
 		<form action="submit.php" method="get">
-			<input type="text" name="song" placeholder="Input text here" size="35" >
+			<input type="text" name="artist" placeholder="Input text here" size="35" >
 			<br>
 			<div class="floatright">
 				<input class="purplebutton marginleft10" type="submit" value="Submit">
