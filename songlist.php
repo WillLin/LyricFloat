@@ -13,7 +13,7 @@
 			$this->song_map=array();
 		}
 		function setList($songlist){
-			foreach ($songlist as $artist => $song) {
+			foreach ($songlist as $song) {
 				if($song->hasWord($this->word)){
 					$list=$song->getWordList();
 					$this->song_map[$song->getName()]=$list[$this->word];
