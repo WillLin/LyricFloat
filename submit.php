@@ -58,6 +58,8 @@
 				$tmax = max($counted); /* Frequency upper-bound */
 				$count = 0;
 
+				$artist = $_GET['artist'];
+
 				foreach ($counted as $word => $frequency) {
 						if ($frequency > $tmin) {
 							$count += 1;
@@ -75,7 +77,7 @@
 						}
 
 						if ($font_size >= $fmin) {
-							$cloud .= "<a href=\"page2.php?artist=INSERT_ARTIST_HERE&word=$word\" style=\"font-size: {$font_size}px; color: $color;\">$word</a> ";
+							$cloud .= "<a href=\"page2.php?artist=$artist&word=$word\" style=\"font-size: {$font_size}px; color: $color;\">$word</a> ";
 						}
 
 					}

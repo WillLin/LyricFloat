@@ -13,7 +13,7 @@
 		<div id="content">
 			<div id="lyriccontent">
 				<!-- album cover goes here -->
-				<h1 id="songtitle">Song Title</h1>
+				<h1 id="songtitle"><?php echo $_GET['song']; ?></h1>
 				<h2 id="songartist">Artist Name</h2>
 
 				<div id="songlyrics">
@@ -31,12 +31,22 @@
 			
 			<div>
 				<form action="page2.php" method="get">
-					<input type="hidden" name="word" value="testttt" />
+					<!-- <input type="hidden" name="word" value="testttt" /> -->
+					<?php 
+						$artist = $_GET['artist'];
+						$word = $_GET['word'];
+						echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
+						echo "<input type=\"hidden\" name=\"word\" value=\"$word\" />";
+					?>
 					<input class="purplebutton floatleft marginright10" type="submit" value="Song Selection">
 				</form>
 
 				<form action="submit.php" method="get">
-					<input type="hidden" name="artist" value="testttt" />
+					<!-- <input type="hidden" name="artist" value="testttt" /> -->
+					<?php 
+						$artist = $_GET['artist'];
+						echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
+					?>
 					<input class="purplebutton floatleft" type="submit" value="Word Cloud">
 				</form>
 			</div>
