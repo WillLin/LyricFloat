@@ -110,7 +110,7 @@
 								$font_size = 10;
 							}
 							if ($font_size >= $fmin) {
-								$cloud .= "<a href=\"page2.php?artist=$artist&word=$word\" style=\"font-size: {$font_size}px; color: $color;\">$word</a> ";
+								$cloud .= "<a href=\"page2.php?artist=$artist&amp;word=$word\" style=\"font-size: {$font_size}px; color: $color;\">$word</a> ";
 							}
 						}
 						$cloud .= "</div>";
