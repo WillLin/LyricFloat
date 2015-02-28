@@ -36,6 +36,10 @@ body {
 	width: 600px;
 }
 
+#wordcloud a {
+	text-decoration: none;
+}
+
 #inputarea {
 	margin: auto;
 	margin-top: 15px;
@@ -103,8 +107,12 @@ body {
 	height: 30px;
 	background-color: purple;
 	border-style: none;
-	color: #dadada;
+	color: white;
 	font-weight: bolder;
+}
+
+.purplebutton:hover {
+	background-color: #6B00ED;
 }
 
 .sharebutton {
