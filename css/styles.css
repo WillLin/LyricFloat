@@ -61,6 +61,8 @@ body {
 }
 
 
+
+
 /*
 #inputarea input[type="button"] {
 	margin-left: 10px;
@@ -123,6 +125,16 @@ body {
 	-webkit-transform: scale(1.5);
 	vertical-align: middle;
 	margin: 0 10px 0 20px;
+}
+
+.ui-autocomplete {
+	max-height: 125px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+	height: 100px;
 }
 
 .marginleft10 {
