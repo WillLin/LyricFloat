@@ -13,7 +13,7 @@
 		<div id="content">
 			<h2 id="searchword"><?php echo $_GET['word']; ?></h2>
 			<div id="songlist">
-				<p><a href="songlyrics.php?artist=test&word=testtt&song=Song+Title+1">Song Title 1</a>.............................Frequency</p>
+				<p><a href="songlyrics.php?artist=test&amp;word=testtt&amp;song=Song+Title+1">Song Title 1</a>.............................Frequency</p>
 				<p>Song Title.............................Frequency</p>
 				<p>Song Title.............................Frequency</p>
 			</div>
