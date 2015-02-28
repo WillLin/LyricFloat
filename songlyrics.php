@@ -10,29 +10,36 @@
 			<a href="./"><img src="images/lyricfloat_sm.png" alt="LyricFloat" /></a>
 		</div>
 
-		<!-- album cover goes here -->
-		<h1>Song Title</h1>
-		<h2>Artist Name</h2>
-		<p>Lyrics</p>
-		<p>Yes very</p>
-		<p>So song</p>
+		<div id="content">
+			<div id="lyriccontent">
+				<!-- album cover goes here -->
+				<h1 id="songtitle">Song Title</h1>
+				<h2 id="songartist">Artist Name</h2>
 
-		
-		<div style="height:25px;">
-			&nbsp;
-		</div>
-		
-		
-		<div>
-			<form action="page2.php" method="get">
-				<input type="hidden" name="word" value="testttt" />
-				<input class="purplebutton floatleft marginright10" type="submit" value="Song Selection">
-			</form>
+				<div id="songlyrics">
+					<p>Lyrics</p>
+					<p>Yes very</p>
+					<p>So song</p>
+				</div>
+			</div>
 
-			<form action="submit.php" method="get">
-				<input type="hidden" name="song" value="testttt" />
-				<input class="purplebutton floatleft" type="submit" value="Word Cloud">
-			</form>
+			
+			<div class="spacer">
+				&nbsp;
+			</div>
+			
+			
+			<div>
+				<form action="page2.php" method="get">
+					<input type="hidden" name="word" value="testttt" />
+					<input class="purplebutton floatleft marginright10" type="submit" value="Song Selection">
+				</form>
+
+				<form action="submit.php" method="get">
+					<input type="hidden" name="artist" value="testttt" />
+					<input class="purplebutton floatleft" type="submit" value="Word Cloud">
+				</form>
+			</div>
 		</div>
 
 		</body>

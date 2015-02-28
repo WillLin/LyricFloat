@@ -3,13 +3,14 @@ body {
 	font-family: Verdana, Geneva, Arial, sans-serif; /*'Droid Sans', */
 	font-size: 14px;
 	color: white;
-	text-align: center;
+	/*text-align: center;*/
 	padding-top: 10px;
 }
 
 #logo {
 	margin: auto;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
+	text-align: center;
 	/*width: 75%; */
 }
 
@@ -17,11 +18,18 @@ body {
 	margin: auto;
 	margin-top: 150px;
 	margin-bottom: 20px;
+	text-align: center;
 	/*width: 75%; */
 }
 
 #content {
-	/*width: 75%; */
+	margin: auto;
+	width: 60%;
+}
+
+#lyriccontent {
+	/*margin: auto;
+	width: 60%;*/
 }
 
 #wordcloud {
@@ -35,13 +43,17 @@ body {
 	width: 400px;
 }
 
-#inputarea input[name="song"] {
+#inputarea input[name="artist"] {
 	margin-bottom: 10px;
 	padding: 5px;
 	height: 40px;
 	width: 100%;
 	border-color: purple;
 	border-style: solid;
+}
+
+#songlyrics {
+	margin-top: 25px;
 }
 
 
@@ -125,4 +137,8 @@ body {
 
 .floatright {
 	float: right;
+}
+
+.spacer {
+	height: 25px;
 }

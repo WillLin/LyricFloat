@@ -10,23 +10,25 @@
 			<a href="./"><img src="images/lyricfloat_sm.png" alt="LyricFloat" /></a>
 		</div>
 
-		<h2>Search World</h2>
-		<p><a href="songlyrics.php">Song Title</a>.............................Frequency</p>
-		<p>Song Title.............................Frequency</p>
-		<p>Song Title.............................Frequency</p>
+		<div id="content">
+			<h2>Search Word</h2>
+			<p><a href="songlyrics.php">Song Title</a>.............................Frequency</p>
+			<p>Song Title.............................Frequency</p>
+			<p>Song Title.............................Frequency</p>
 
-		<!--  Chart lyrics
-		<p>this is where cloud will go</p>*/ 
-		<a href="page2.php" > ?php  echo $_GET["song"];  ?> </a>
-		-->
-		<div style="height:25px;">
-			&nbsp;
+			<!--  Chart lyrics
+			<p>this is where cloud will go</p>*/ 
+			<a href="page2.php" > ?php  echo $_GET["song"];  ?> </a>
+			-->
+			<div class="spacer">
+				&nbsp;
+			</div>
+
+			<form action="submit.php" method="get">
+				<input type="hidden" name="artist" value="testttt" />
+				<input class="purplebutton" type="submit" value="Back">
+			</form>
 		</div>
-
-		<form action="submit.php" method="get">
-			<input type="hidden" name="song" value="testttt" />
-			<input class="purplebutton" type="submit" value="Back">
-		</form>
 
 		</body>
 
