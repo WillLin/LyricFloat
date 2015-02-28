@@ -75,47 +75,6 @@
 						if (!in_array(strtolower($word), $stopwords, TRUE)) {
 							$filtered_words[$pos] = $word;
 						}
-<<<<<<< HEAD
-				}
-			}
-			
-			function word_cloud($words, $div_size = 600) {
-
-				$cloud = "<div style=\"width: {$div_size}px\">";
-				$fmax = 96; /* Maximum font size */
-				$fmin = 3; /* Minimum font size */
-
-				$counted = array_count_values($words);
-				arsort($counted);
-
-				$tmin = min($counted); /* Frequency lower-bound */
-				$tmax = max($counted); /* Frequency upper-bound */
-				$count = 0;
-
-				$artist = $_GET['artist'];
-
-				foreach ($counted as $word => $frequency) {
-						if ($frequency > $tmin) {
-							$count += 1;
-
-							$font_size = floor(  ( $fmax * ($frequency - $tmin) ) / ( $tmax - $tmin )  );
-
-							/*$r = $g = 0; */
-							$r = ($frequency * $tmax * $count) % 250;
-							$g = floor( 50 * ($frequency / $tmax));
-							$b = floor( 255 * ($frequency / $tmax) );
-							$color = '#' . sprintf('%02s', dechex($r)) . sprintf('%02s', dechex($g)) . sprintf('%02s', dechex($b));
-
-						} else {
-							$font_size = 10;
-						}
-
-						if ($font_size >= $fmin) {
-							$cloud .= "<a href=\"page2.php?artist=$artist&amp;word=$word\" style=\"font-size: {$font_size}px; color: $color;\">$word</a> ";
-						}
-
-=======
->>>>>>> cc4071a05654f2891f8758889088b60e06357bda
 					}
 					return $filtered_words;
 				}
