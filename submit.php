@@ -157,6 +157,7 @@
 		<div style="height:50px;">
 		</div>
 
+		<!-- Need to fix dropdown style -->
 		<div id="inputarea" class="ui-widget">
 			<form action="submit.php" method="get">
 				<input id="artist" type="text" name="artist" placeholder="Input text here" size="35" >
