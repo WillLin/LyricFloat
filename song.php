@@ -28,7 +28,7 @@
 					if(!in_array($w, $wordlist)){
 						array_push($wordlist, $w);
 					}*/
-					if(array_key_exists($word, $this->wordlist){
+					if(array_key_exists($word, $this->wordlist)){
 						$this->wordlist[$word]++;
 					}
 					else{
