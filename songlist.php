@@ -12,6 +12,12 @@
 			$this->word=$wordname
 			$this->song_map=array();
 		}
+		function reset(){
+			$this->song_map=array();
+		}
+		function setWord($wordname){
+			$this->word=$wordname;
+		}
 		function setList($songlist){
 			foreach ($songlist as $song) {
 				if($song->hasWord($this->word)){
