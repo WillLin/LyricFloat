@@ -28,8 +28,8 @@
 				if($word==$filter){
 					return false;
 				}
-				return true;
 			}
+			return true;
 		}
 		function execute($songlist){
 			foreach ($songlist as $song) {
