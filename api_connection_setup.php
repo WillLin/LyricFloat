@@ -6,104 +6,56 @@
 <body>
 <?php
 
+include('genius_api.php');
+include('song.php');
 // Input the artist
 
-$artist = "Radiohead";
 
-// Convert to lowercase
-$artist = strtolower($artist);
 
-// Substituite spaces with  "+"
-$artist = preg_replace("/[\s_]/", "+", $artist);
+echo "hello" . '<br>';
+$artist = "Spice 1";
 
-// Test array for parsing
-$songsHolder = array();
+$artist = preg_replace("/[\s_]/", "-", $artist);
 
-for ($i = 0; $i < 4; $i++) // we get max of 500 songs
+$album_list = album_list($artist);
+$song_list_by_album = array();
+$songs_array = array();
+
+for($i = 0; $i < count($album_list); $i++)
 {
+	echo $album_list[$i]['link'] . '<br>';
 
-// 4 API calls to get 500 songs (0 - 100, 100 - 200, ..., 400 - 500)
-	$startValue = $i * 100;
+	$song_list_by_album[] = tracklist($album_list[$i]['link']);
 
-	$artistTag = "&" . "start=" . (string)$startValue;
-
-// call the api
-	$response = "http://developer.echonest.com/api/v4/song/search?api_key=EUJOLEILYPQ1ON13P&artist=" . $artist . $artistTag . "&results=100";
-
-// get parsed file
-	$response = file_get_contents($response);
-
-// json decode
-	$response = json_decode($response);
-
-// get songs array
-	$songs = $response->response->songs;
-
-// for each song, get title.
-	for ($j = 0; $j < count($songs); $j++)
-	{		
-
-			$titleProcessed = $songs[$j]->title;
-
-			// explode to inspect
-			$processArray = explode(" ", $titleProcessed);
-
-		//	check if the title has XX. at the beginning, if yes, strip it
-			if (preg_match("/^[0-9]{2}.$/", $processArray[0]))
-				{
-
-					$titleProcessed = substr($titleProcessed, 4);
-				}
+}
 
 
-			// if it has the word "Track" in it - ignore it 
-			if (strpos($titleProcessed, 'Track') == true || preg_match('/track/i', $titleProcessed) == true)
-				continue;
+for($i = 0; $i < count($song_list_by_album); $i++)
+{	
+	for ($j = 0; $j < count($song_list_by_album[$i]); $j++)
+	{
+		$song = new Song($song_list_by_album[$i][$j]['title'], $song_list_by_album[$i][$j]['artist']);
+		
+		//$lyrics = lyrics($song_list_by_album[$i][$j]['link'], FALSE);
 
-			// else, add to array
-			else
-				$songsHolder[] = $titleProcessed;
+		$link = substr($song_list_by_album[$i][$j]['link'], 17);
 
+		$lyrics = lyrics($link, FALSE);
+
+		$song->parseLyrics($lyrics);
+
+		$songs_array[] = $song;
 	}
+	
 
 }
 
-
-
-// ------------------ GET THE LYRICS -------------
-// (We still need a better API. The calls to this one fails occasionally).
-
-// create array of lyrics
-$lyricsArray = array();
-
-
-for ($i = 0; $i < count($songsHolder); $i++)
-{
-	
-	$song = strtolower($songsHolder[$i]);
-	$song = preg_replace("/[\s_]/", "+", $song);
-	// convert all song titles to appropriate format and call for each song and this artist
-	$response = "http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect?";
-	$response = $response . "artist=" . $artist . "&song=" . $song;
-
-	echo "RESPONSE: " . $response . '<br>';
-
-
-	$response = file_get_contents($response);
-
-	// get only lyrics
-	$lyrics = (substr($response, strpos($response, "\r\n\r\n")+4));
-	
-	echo "lyrics: " . $lyrics . '<br>';
-
-	// put in array for lyrics
-
-	$lyricsArray[] = $lyrics;
-
-}
-echo '<br>' . '<br>';
-
-
+echo count($songs_array) . '<br>';
+echo $songs_array[0]->getName() . '<br>';
+echo $songs_array[0]->getArtist() . '<br>';
+$list1= $songs_array[0]->getWordList();
+list($key1,$value1)=each($list1);
+echo $key1 . ' ' . $value1 .  '<br>';
 
 
 ?>
