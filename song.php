@@ -5,12 +5,12 @@
 	class Song
 	{
 		//song name
-		private var $name;
+		private $name;
 		//artist name
-		private var $artist;
+		private $artist;
 		//word list, key is word's context, 
 		//value is its frequency in this song
-		private var $wordlist;
+		private $wordlist;
 		function __construct($name,$artist)
 		{
 			$this->name=$name;

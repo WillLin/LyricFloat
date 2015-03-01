@@ -5,8 +5,8 @@
 	require 'song.php';
 	class Songlist
 	{
-		private var $word;
-		private var $song_map;
+		private $word;
+		private $song_map;
 		function __construct($wordname)
 		{
 			$this->word=$wordname
