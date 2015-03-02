@@ -5,11 +5,11 @@
 	require 'song.php';
 	class Songlist
 	{
-		private $word;
-		private $song_map;
+		private var $word;
+		private var $song_map;
 		function __construct($wordname)
 		{
-			$this->word=$wordname;
+			$this->word=$wordname
 			$this->song_map=array();
 		}
 		function reset(){
