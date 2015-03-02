@@ -19,33 +19,46 @@ function add_to_cloud($artist)
 	// grab lyrics for current artist
 	$songs_array = getAllLyrics($artist);
 
+	$final = array();
+				for ($i = 0; $i < count($songs_array); $i++)
+				{
 
-	$result = array();
-	$result = $songs_array[0]->getWordList();
+					foreach($songs_array[$i]->getWordList() as $key=>$value)
+					{
 
-	for ($i = 1; $i < count($songs_array); $i++)
-	{
-		$result = array_merge($result, $songs_array[$i]->getWordList());
-
-	}
-
-	$newarraycount = 0;
-	$newarray = array();
-
-	foreach ($result as $key => $value) 
-	{
-		while ($value > 1) {
-			$newarray[$newarraycount] = $key;
-			$newarraycount++;
-			$value--;
-		}
+							$final[] = $key;
+					}
 
 
-		//echo "$key .  $value <br>";
-	}
+			}
+
+
+	// $result = array();
+	// $result = $songs_array[0]->getWordList();
+
+	// for ($i = 1; $i < count($songs_array); $i++)
+	// {
+	// 	$result = array_merge($result, $songs_array[$i]->getWordList());
+
+	// }
+
+	// $newarraycount = 0;
+	// $newarray = array();
+
+	// foreach ($result as $key => $value) 
+	// {
+	// 	while ($value > 1) {
+	// 		$newarray[$newarraycount] = $key;
+	// 		$newarraycount++;
+	// 		$value--;
+	// 	}
+
+
+	// 	//echo "$key .  $value <br>";
+	// }
 
 	// merge lyrics arrays together and save to the current session
-	$merged_array = array_merge($transferred_array, $newarray);
+	$merged_array = array_merge($transferred_array, $final);
 	$_SESSION['allWords'] = $merged_array;
 
 	// merge song list arrays together and save to the current session
