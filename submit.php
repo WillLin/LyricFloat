@@ -88,11 +88,9 @@
 							} else {
 								$font_size = 10;
 								$r = mt_rand ( 0 , 255 );
-
 								$g = mt_rand ( 0 , 255 );
 								$b = mt_rand ( 0 , 255 );
 								$color=  "rgb($r,$g,$b)";
-;
 							}
 							if ($font_size >= $fmin) {
 								if ($i < 250) {
@@ -128,7 +126,14 @@
 					}
 				}
 
+				// $artists_array is an array of all artists in the current cloud
+				$artists_array = array();
+				$artists_array[] = $artist;
+
+				// save arrays to the session
 				$_SESSION['allWords'] = $newarray;
+				$_SESSION['songsArray'] = $songs_array;
+				$_SESSION['artistsArray'] = $artists_array;
 
 
 					// foreach ($list1 as $key => $value)
@@ -148,15 +153,15 @@
 		</div>
 
 		<div id="inputarea">
-		<!-- CHANGE THIS -->
+		
 			<!-- <form action="submit.php" method="get"> -->
 			<form action="submit2.php" method="get"> 
 				<input id="artist" class="ui-widget" type="text" name="artist" placeholder="Enter artist name" size="35" >
 				<br />
 				<div class="floatright">
-					<input class="purplebutton marginleft10" type="button" value="Add to Cloud">
+					<button class="purplebutton marginleft10" formaction="submit2.php" type="submit" value="Add to Cloud">Add to Cloud</button>
 					<div class="fb-share-button sharebutton" data-layout="button"></div>
-					<input class="purplebutton marginleft10" type="submit" value="Submit">
+					<button class="purplebutton marginleft10" formaction="submit.php" type="submit" value="Submit">Submit</button>
 				</div>
 			</form>
 		</div>
