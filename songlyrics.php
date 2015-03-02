@@ -112,12 +112,12 @@
 					<input class="purplebutton floatleft marginright10" type="submit" value="Song Selection">
 				</form>
 
-				<form action="submit.php" method="get">
+				<form action="storedwordcloud.php" method="get">
 					<!-- <input type="hidden" name="artist" value="testttt" /> -->
-					<?php 
+					<!-- <?php 
 						$artist = $_GET['artist'];
 						echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
-					?>
+					?> -->
 					<input class="purplebutton floatleft" type="submit" value="Word Cloud">
 				</form>
 			</div>

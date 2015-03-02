@@ -43,9 +43,9 @@ function countFreq($word)
 		$url .= $word;
 		$url .= "&amp;song=";
 		$url .= $formattedSongName;
-		echo "<p><a href=\"$url\">";
+		echo "<p><a href=\"$url\" style=\"color:white;\">";
 		echo $songName . " ................................ "  . $frequency  . ' ';
-		echo '</p>';
+		echo '</a></p>';
 	}
 }
 ?>
@@ -85,12 +85,12 @@ function countFreq($word)
 				&nbsp;
 			</div>
 
-			<form action="submit.php" method="get">
+			<form action="storedwordcloud.php" method="get">
 				<!-- <input type="hidden" name="artist" value="testttt" /> -->
-				<?php 
+				<!--<?php 
 					$artist = $_GET['artist'];
 					echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
-				?>
+				?>-->
 				<input class="purplebutton" type="submit" value="Back">
 			</form>
 		</div>
