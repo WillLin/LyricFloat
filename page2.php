@@ -31,9 +31,21 @@ function countFreq($word)
 
 	$lists=new Songlist($word);
 	$lists->setList($songs);
-	$songlist=$lists->getList();
+	$songlist=$lists->getFrequencyList();
+	$artistList = $lists->getArtistMap();
 	foreach ($songlist as $songName => $frequency) {
-		echo $songName . " ................................ "  . $frequency  . '<br>';
+		$artistName = $artistList[$songName];
+		$formattedArtistName = str_replace(' ', '+', $artistName);
+		$formattedSongName = str_replace(' ', '+', $songName);
+		$url = "songlyrics.php?artist=";
+		$url .= $formattedArtistName;
+		$url .= "&amp;word=";
+		$url .= $word;
+		$url .= "&amp;song=";
+		$url .= $formattedSongName;
+		echo "<p><a href=\"$url\">";
+		echo $songName . " ................................ "  . $frequency  . ' ';
+		echo '</p>';
 	}
 }
 ?>

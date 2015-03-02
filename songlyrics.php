@@ -63,8 +63,10 @@
 					echo $songArray["lyrics"];
 					echo '</pre>';
 
+					// get the desired word
 					$word = $_GET['word'];
 
+					// highlight the desired word
 					$command = "myHilitor.apply(\"$word\");";
 
 					echo '<script type="text/javascript">'
