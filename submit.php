@@ -148,7 +148,9 @@
 		</div>
 
 		<div id="inputarea">
-			<form action="submit.php" method="get">
+		<!-- CHANGE THIS -->
+			<!-- <form action="submit.php" method="get"> -->
+			<form action="submit2.php" method="get"> 
 				<input id="artist" class="ui-widget" type="text" name="artist" placeholder="Enter artist name" size="35" >
 				<br />
 				<div class="floatright">

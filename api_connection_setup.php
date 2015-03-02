@@ -1,15 +1,7 @@
-
 <?php
-
-
 include('genius_api.php');
 include('song.php');
 // Input the artist
-function microtime_float()
-{
-    list($usec, $sec) = explode(" ", microtime());
-    return ((float)$usec + (float)$sec);
-}
 
 function getAllLyrics ($artist) {
 
@@ -19,8 +11,9 @@ function getAllLyrics ($artist) {
 	$song_list_by_album = array();
 	$songs_array = array();
 
-	$time_start = microtime_float();
-	for($i = 0; $i < count($album_list); $i++)
+	//$time_start = microtime_float();
+	//for($i = 0; $i < count($album_list); $i++)
+	for($i = 0; $i < 1; $i++)
 	{
 		
 		//echo $album_list[$i]['link'] . '<br>';
