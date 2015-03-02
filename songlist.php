@@ -9,7 +9,7 @@
 		private $song_map;
 		function __construct($wordname)
 		{
-			$this->word=$wordname
+			$this->word=$wordname;
 			$this->song_map=array();
 		}
 		function reset(){
