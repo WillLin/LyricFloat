@@ -1,42 +1,38 @@
 <html>
 
-	<head>
-		<title>Scope</title>
-	</head>
+    <head>
+        <title>Scope</title>
+    </head>
 
-	<body>
-		<?php
-		$var = 1;
+    <body>
+        <?php
+        class test
+        {
 
-		function test1()
-		{
+        public function test1()
+        {
+            $var = 1;
 
-			global $var;
-			$var = 2;
-			echo $var . '<br>';
-		}
+            global $var;
+            $var = 2;
+            return $var;
+        }
 
-		test1();
-
-		echo $var . '<br>';
-
-		$var = 1;
-
-		function test3()
-		{
-
-			static $var;
-			$var++;
-			echo $var . '<br>';
-		}
-
-		test3();
-		test3();
-		test3();
-
-		?>
+        //echo $var . '<br>';
 
 
-	</body>
+        public function test3()
+        {
+            $var = 1;
+            static $var;
+            $var++;
+            return $var;
+        }
+
+        }
+        ?>
+
+
+    </body>
 
 </html>

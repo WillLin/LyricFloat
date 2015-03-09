@@ -19,13 +19,14 @@
 		}
 		function setSize($n){
 			$this->size=$n;
+			//print $this->size;
 		}
 		function reset(){
 			$this->wordcloudArray=array();
 		}
-		function list_filter($word){
+		function test($var){
 			foreach ($this->stopwords as $filter) {
-				if($word==$filter){
+				if($var==$filter){
 					return false;
 				}
 			}
@@ -34,14 +35,14 @@
 		function execute($songlist){
 			foreach ($songlist as $song) {
 				$wordlist=$song->getWordList();
-				$this->wordcloudArray=$this->mixer->merge($wordcloudArray,$wordlist);
+				$this->wordcloudArray=$this->mixer->merge($this->wordcloudArray,$wordlist);
 			}
-			$this->wordcloudArray=array_filter($this->wordcloudArray,"list_filter");
 			arsort($this->wordcloudArray);
-			array_slice($this->wordcloudArray, 0,$size,true);
+			$this->wordcloudArray=array_slice($this->wordcloudArray, 0,$this->size,true);
+			//print_r($this->wordcloudArray);
 		}
 		function getWordcloudArray(){
-			return $this->wordcloudArray
+			return $this->wordcloudArray;
 		}
 
 	}

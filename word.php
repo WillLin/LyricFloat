@@ -4,8 +4,8 @@
 	*/
 	class Word
 	{
-		private var $wordName;
-		private var $frequency;
+		private $wordName;
+		private $frequency;
 		
 		function __construct($name)
 		{

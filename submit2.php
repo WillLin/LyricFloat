@@ -134,7 +134,7 @@
 				<br />
 				<div class="floatright">
 					<button id="addToCloud" class="purplebutton marginleft10" formaction="submit2.php" type="submit" value="Add to Cloud">Add to Cloud</button>
-					<div class="fb-share-button sharebutton" data-layout="button"></div>
+					<div id="shareWithFacebook" class="fb-share-button sharebutton" data-layout="button"></div>
 					<button id="submitbutton" class="purplebutton marginleft10" formaction="submit.php" type="submit" value="Submit">Submit</button>
 				</div>
 			</form>
