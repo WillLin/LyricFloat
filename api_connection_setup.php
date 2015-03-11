@@ -13,7 +13,7 @@ function getAllLyrics ($artist) {
 
 	//$time_start = microtime_float();
 	//for($i = 0; $i < count($album_list); $i++)
-	for($i = 0; $i < 3; $i++)
+	for($i = 0; $i < 1; $i++)
 	{
 		
 		//echo $album_list[$i]['link'] . '<br>';
