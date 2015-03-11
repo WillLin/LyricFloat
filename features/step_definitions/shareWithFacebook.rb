@@ -3,11 +3,13 @@ require "watir-webdriver"
 browser = Watir::Browser.new
 
 Given(/^I have a word cloud displayed$/) do
-  browser.goto "http://localhost:8888/lyricFloat/submit.php?artist=Lady+Gaga"
+   browser.goto "http://localhost:8888/lyricFloat/index.php"
+   browser.text_field(:name => "artist").set("Lady Gaga")
+   browser.input(:id =>"submitbutton").click
 end
 
 When(/^I click Share to Facebook$/) do
-  browser.div(:id =>"shareWithFacebook").click
+  browser.button(:value =>"Share").click
 end
 
 Then(/^I should see a Share With Facebook popover$/) do
