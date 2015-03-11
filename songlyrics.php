@@ -59,7 +59,7 @@
 					echo '</h2><br />';
 
 					// print lyrics
-					echo '<pre>';
+					echo '<pre id="songlyrics">';
 					echo $songArray["lyrics"];
 					echo '</pre>';
 
@@ -70,7 +70,7 @@
 					$command = "myHilitor.apply(\"$word\");";
 
 					echo '<script type="text/javascript">'
-					   , 'var myHilitor = new Hilitor("content");'
+					   , 'var myHilitor = new Hilitor("songlyrics");'
 					   , $command
 					   , '</script>'
 					;
