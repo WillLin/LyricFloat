@@ -8,7 +8,7 @@ Before do
 end
 
 Given(/^I am on the main page$/)do
-browser.goto "http://localhost/introducingphp/lyricfloat/index.php"
+browser.goto "http://10.0.2.15/LyricFloat/index.php"
 end
 
 When(/^enter blank details for input field$/)do
@@ -23,7 +23,7 @@ end
 
 When (/^enter valid artist$/)do
 	browser = Watir::Browser.new
-	browser.goto "http://localhost/introducingphp/lyricfloat/index.php"
+	browser.goto "http://10.0.2.15/LyricFloat/index.php"
 	browser.text_field(:id,"artist").set("Eminem")
 	browser.button(:id,"submitbutton").click
 end
@@ -35,13 +35,13 @@ end
 
 When (/^enter invalid artist$/)do
 	browser = Watir::Browser.new
-	browser.goto "http://localhost/introducingphp/lyricfloat/index.php"
+	browser.goto "http://10.0.2.15/LyricFloat/index.php"
 	browser.text_field(:id,"artist").set("ajajaja")
 	browser.button(:id,"submitbutton").click
 end
 
 Then (/^noartist error shown$/)do
-	puts "Invalid artist!"
+	puts "Invalid artist!".red
 	browser.close
 end
 

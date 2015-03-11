@@ -8,11 +8,11 @@ Before do
 end
 
 Given(/^I am on song select page$/) do
-  browser.goto "http://localhost/introducingphp/lyricfloat/page2.php?artist=radiohead&word=back"
+  browser.goto "http://10.0.2.15/LyricFloat/page2.php?artist=radiohead&word=back"
 end
 
 When(/^I click on the song title link$/) do
-	browser.goto "http://localhost/introducingphp/lyricfloat/songlyrics.php?artist=Radiohead&word=back&song=Knives+Out"
+	browser.goto "http://10.0.2.15/LyricFloat/songlyrics.php?artist=Radiohead&word=back&song=Knives+Out"
 end
 
 Then (/^I should see artist title$/) do
