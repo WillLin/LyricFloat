@@ -8,4 +8,7 @@ Feature: Search certain artist
 	Given I am on the main page
 	When enter valid artist
 	Then word cloud created
-	
+	Scenario: Input invalid artist
+	Given I am on the main page
+	When enter invalid artist
+	Then noartist error shown

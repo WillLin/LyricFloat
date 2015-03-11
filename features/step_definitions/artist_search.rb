@@ -32,3 +32,16 @@ Then (/^word cloud created$/)do
 	puts "Word Cloud Created"
 	browser.close
 end
+
+When (/^enter invalid artist$/)do
+	browser = Watir::Browser.new
+	browser.goto "http://localhost/introducingphp/lyricfloat/index.php"
+	browser.text_field(:id,"artist").set("ajajaja")
+	browser.button(:id,"submitbutton").click
+end
+
+Then (/^noartist error shown$/)do
+	puts "Invalid artist!"
+	browser.close
+end
+
