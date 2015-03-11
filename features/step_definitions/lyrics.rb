@@ -1,5 +1,5 @@
 require "watir-webdriver"
-require 'colorize'
+#require 'colorize'
 
 browser = Watir::Browser.new
 
