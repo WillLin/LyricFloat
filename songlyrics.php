@@ -109,7 +109,7 @@
 						echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
 						echo "<input type=\"hidden\" name=\"word\" value=\"$word\" />";
 					?>
-					<input class="purplebutton floatleft marginright10" type="submit" value="Song Selection">
+					<input id="songlistbutton" class="purplebutton floatleft marginright10" type="submit" value="Song Selection">
 				</form>
 
 				<form action="storedwordcloud.php" method="get">
@@ -118,7 +118,7 @@
 						$artist = $_GET['artist'];
 						echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
 					?> -->
-					<input class="purplebutton floatleft" type="submit" value="Word Cloud">
+					<input id="wordcloudbutton" class="purplebutton floatleft" type="submit" value="Word Cloud">
 				</form>
 			</div>
 		</div>

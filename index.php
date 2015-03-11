@@ -30,7 +30,7 @@
 				<input id="artist" class="ui-widget" type="text" name="artist" placeholder="Enter artist name" size="35" >
 				<br />
 				<div class="floatright">
-					<input class="purplebutton marginleft10" type="submit" value="Submit">
+					<input id="submitbutton" class="purplebutton marginleft10" type="submit" value="Submit">
 				</div>
 			</form>
 		</div>

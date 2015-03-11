@@ -91,7 +91,7 @@ function countFreq($word)
 					$artist = $_GET['artist'];
 					echo "<input type=\"hidden\" name=\"artist\" value=\"$artist\" />";
 				?>-->
-				<input class="purplebutton" type="submit" value="Back">
+				<input id="backbutton" class="purplebutton" type="submit" value="Back">
 			</form>
 		</div>
 
